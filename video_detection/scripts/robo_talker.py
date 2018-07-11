@@ -33,45 +33,49 @@
 #
 # Revision $Id$
 
-## Simple talker demo that listens to std_msgs/Strings published 
+## Simple talker demo that published std_msgs/Strings messages
 ## to the 'chatter' topic
 
 import rospy
 from std_msgs.msg import String
-import base64
-import os
-from objectdetect import object_detect
+from sensor_msgs.msg import Image 
+import time
 
-PATH_TO_TEST_IMAGES_DIR = 'my_test_images'
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 2) ]
+global subscr
+def callback(data): 
+    msg = data.data
+    #print(msg)
+    global MSG
+    MSG = msg
+    subscr.unregister()
 
-def callback(data):
-    imgdata = data.data
-    imgdata = base64.b64decode(imgdata)
-    print(type(imgdata))
-    upload_image_path = 'my_test_images/image1.jpg'
-    with open(upload_image_path, 'wb') as f:
-        f.write(imgdata)
-    res = object_detect(TEST_IMAGE_PATHS)
+subscr = rospy.Subscriber('results', String, callback)
+MSG = None 
+#subscr = rospy.Subscriber('results', String, callback)
+def talker(message):
+    pub = rospy.Publisher('chatter', String, queue_size=10)
 
-    ret_message = res
-    pub = rospy.Publisher('results', String, queue_size=10) 
-    pub.publish(ret_message)
+    rospy.init_node('talker', anonymous=True)
+    # publish
+    pub.publish(message)
+    
+    # keep subscribing message until receiving the feedback or 10 min has passed
+    start_time = time.clock()
+    while not rospy.is_shutdown():
+        wait_time = time.clock() - start_time
+        if wait_time >= 10 * 60:
+            break
+        
+        if MSG == None:
+            subscr = rospy.Subscriber('results', String, callback)
+            #rospy.spin()
+        else:
+            break
+       
 
-
-def listener():
-
-    # In ROS, nodes are uniquely named. If two nodes with the same
-    # name are launched, the previous one is kicked off. The
-    # anonymous=True flag means that rospy will choose a unique
-    # name for our 'listener' node so that multiple listeners can
-    # run simultaneously.
-    rospy.init_node('cloud_server', anonymous=True)
-
-    rospy.Subscriber('chatter', String, callback)
-
-    # spin() simply keeps python from exiting until this node is stopped
-    rospy.spin()
 
 if __name__ == '__main__':
-    listener()
+    try:
+        talker()
+    except rospy.ROSInterruptException:
+        pass
