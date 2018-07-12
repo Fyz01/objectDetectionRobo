@@ -21,7 +21,7 @@ MODEL_FILE = MODEL_NAME + '.tar.gz'
 DOWNLOAD_BASE = 'https://reganfan.github.io/assets/models/'
 ```
 
-`ssd_mobilenet_v1_coco_2018_01_28`为使用的物体识别模型名字，这是一个识别快速但准确率相对较低的模型，可以访问官方[detection_model_zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)页面了解更多的模型信息，同时也可以下载其他模型，下载地址为http://download.tensorflow.org/models/object_detection/model_name，其中model_name替换成上述的具体模型名字加版本号。同时需要提醒的是，下载模型需要科学上网，所以本次Demo使用了已上传在自己个人仓库的一个模型，如果你只想看看Demo的效果，就没有必要更改下载地址和模型了。
+`ssd_mobilenet_v1_coco_2018_01_28`为使用的物体识别模型名字，这是一个识别快速但准确率相对较低的模型，可以访问官方[detection_model_zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)页面了解更多的模型信息，同时也可以下载其他模型，下载地址为http://download.tensorflow.org/models/object_detection/model_name ，其中model_name替换成上述的具体模型名字加版本号。同时需要提醒的是，下载模型需要科学上网，所以本次Demo使用了已上传在自己个人仓库的一个模型，如果你只想看看Demo的效果，就没有必要更改下载地址和模型了。
 
 另外，如果你是第一次执行该代码，请取消以下部分代码的注释，当本地已有识别模型后，可以再次注释该下载模型代码：
 
