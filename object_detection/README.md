@@ -21,3 +21,10 @@
 ### 后台识别结果
 
 ![out_image](https://reganfan.github.io/assets/cloud-robot-diagram/out_image.jpg)
+
+## 参考
+
+本Demo极大地参考了以下代码的框架和设计：
+
+- [RoboEyes--A face recognition demo for ROS.](https://github.com/shleeky/robo_eyes)
+- [Quick Start: Jupyter notebook for off-the-shelf inference](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb)

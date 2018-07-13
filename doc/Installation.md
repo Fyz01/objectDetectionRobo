@@ -82,7 +82,7 @@ pip install opencv-python
 git clone https://github.com/ReganFan/objectDetectionRobo
 ```
 
-##编译 Demo 源码 
+## 编译 Demo 源码 
 
 先开启ROS环境：
 

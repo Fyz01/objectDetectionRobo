@@ -19,3 +19,10 @@ TODO.GIF
 ### 识别视频输出
 
 TODO.GIF
+
+## 参考
+
+本Demo极大地参考了以下代码的设计：
+
+- [Deep-Learning Object_Detection_Tensorflow_API  by  priya-dwivedi](https://github.com/priya-dwivedi/Deep-Learning/blob/master/Object_Detection_Tensorflow_API.ipynb)
+- [Video Object Detection System Tutorial on Windows 10](https://blog.csdn.net/xiaoxiao123jun/article/details/76605928)
