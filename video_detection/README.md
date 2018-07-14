@@ -4,7 +4,7 @@
 
 ## 框架设计
 
-TODO.png
+![framework](https://reganfan.github.io/assets/cloud-robot-diagram/framework.png)
 
 ## 运行时节点关系
 
