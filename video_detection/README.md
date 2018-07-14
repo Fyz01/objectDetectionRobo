@@ -14,11 +14,11 @@
 
 ### 视频输入
 
-[输入]()
+[输入](https://github.com/Fyz01/objectDetectionRobo/blob/master/video_detection/vedio1.gif)
 
 ### 识别视频输出
 
-[输出]()
+[输出](https://github.com/Fyz01/objectDetectionRobo/blob/master/video_detection/vedio1_out.gif)
 
 ## 参考
 
