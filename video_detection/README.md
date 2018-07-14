@@ -8,7 +8,7 @@
 
 ## 运行时节点关系
 
-TODO.png
+![node_graph](https://reganfan.github.io/assets/cloud-robot-diagram/node_graph.png)
 
 ## 示例
 
