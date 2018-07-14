@@ -8,13 +8,13 @@ ObjectDetectionRobo是一个兼具静态和动态物体识别（图像和视频�
 
 **Setup:**
 
-- [Installation](https://github.com/ReganFan/objectDetectionRobo/blob/master/doc/Installation.md)
+- [Installation](https://github.com/Fyz01/objectDetectionRobo/blob/master/doc/Installation.md)
 
 **Running:**
 
-- [Running image object detection demo](https://github.com/ReganFan/objectDetectionRobo/blob/master/doc/Running_image_object_detection_demo.md)
-- [Running video object detection demo](https://github.com/ReganFan/objectDetectionRobo/blob/master/doc/Running_video_object_detection_demo.md)
-- [Sample Output](https://github.com/ReganFan/objectDetectionRobo/blob/master/doc/Sample_Output.md)
+- [Running image object detection demo](https://github.com/Fyz01/objectDetectionRobo/blob/master/doc/Running_image_object_detection_demo.md)
+- [Running video object detection demo](https://github.com/Fyz01/objectDetectionRobo/blob/master/doc/Running_video_object_detection_demo.md)
+- [Sample Output](https://github.com/Fyz01/objectDetectionRobo/blob/master/doc/Sample_Output.md)
 
 **References:**
 
@@ -55,6 +55,6 @@ ObjectDetectionRobo是一个兼具静态和动态物体识别（图像和视频�
 
 ### July 16, 2018
 
-面向机器人的软件设计与开发实训项目制品交付，提供了[图像物体识别Demo](https://github.com/ReganFan/objectDetectionRobo/tree/master/object_detection)和[视频物体识别Demo](https://github.com/ReganFan/objectDetectionRobo/tree/master/video_detection)。图像物体识别Demo具有前端界面利用摄像头拍摄图片，机器人节点获取和传输图片数据以及接收服务器处理结果消息，后台服务器接收图片数据进行物体识别处理并显示结果以及通知机器人节点结果消息。视频物体识别Demo简单地利用本地摄像头拍摄短视频，经过机器人节点通知消息，本地服务器读取视频并进行物体识别处理，返回结果识别视频，同时通知机器人节点结果消息。
+面向机器人的软件设计与开发实训项目制品交付，提供了[图像物体识别Demo](https://github.com/Fyz01/objectDetectionRobo/tree/master/object_detection)和[视频物体识别Demo](https://github.com/Fyz01/objectDetectionRobo/tree/master/video_detection)。图像物体识别Demo具有前端界面利用摄像头拍摄图片，机器人节点获取和传输图片数据以及接收服务器处理结果消息，后台服务器接收图片数据进行物体识别处理并显示结果以及通知机器人节点结果消息。视频物体识别Demo简单地利用本地摄像头拍摄短视频，经过机器人节点通知消息，本地服务器读取视频并进行物体识别处理，返回结果识别视频，同时通知机器人节点结果消息。
 
 **Thanks to contributors:**  Yeshu，Fan
